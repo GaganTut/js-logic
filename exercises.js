@@ -1,23 +1,23 @@
 /*
 If statements - Evaluates (or checks) a condition. If the condition is true, any statements in the subsequent code block are executed
 */
+/*
 var today = new Date();
 
 if(today === "Friday"){
   return "Let's Party!";
 }
-
+*/
 /*
 If/else statements = Evaluates (or checks) a condition. If the condition is true, the first code block is executed. If the condition is false, the second code block is executed instead.
 */
-
+/*
 if(today === "Friday"){
   return "Let's Party!";
 }else{
   return "Get back to coding!";
 }
-
-
+*/
 /*
  * #1
  * Function - canVote
@@ -88,8 +88,14 @@ console.log(isGreaterThan(4,9));
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
-
-
+function mustBeTrue(boo){
+  if (boo === true){
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(mustBeTrue(false));
 /*
  * #5
  * Function - bigBird
@@ -101,8 +107,14 @@ console.log(isGreaterThan(4,9));
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
-
-
+function bigBird(word){
+  if (word.length === 3){
+    return "Word to Big Bird!!!";
+  } else {
+    return "Try Again";
+  }
+}
+console.log(bigBird("mom"));
 /*
  * #6
  * Function - isEqual
@@ -115,7 +127,14 @@ console.log(isGreaterThan(4,9));
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
-
+function isEqual(first, second){
+  if (first === second){
+    return "You look mahvelous!";
+  } else {
+    return "I don't know who you are anymore";
+  }
+}
+console.log(isEqual(5,9));
 
 /*
  * #7
