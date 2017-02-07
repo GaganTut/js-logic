@@ -148,7 +148,14 @@ console.log(isEqual(5,9));
  * If the strings are not equal, the function will return the message "Opposites do attract." Otherwise, return the message: "Cause it's like you're my mirror." 
  * Console.log your result.
 */
-
+function notEqual(first, second){
+  if (first !== second){
+    return "Opposites do attract!";
+  } else {
+    return "Cause it's like you're my mirror";
+  }
+}
+console.log(notEqual(5,9));
 
 /*
  * #8
@@ -161,7 +168,14 @@ console.log(isEqual(5,9));
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function spareChange(money){
+  if (money > 100) {
+    return  true;
+  } else {
+    return false;
+  }
+}
+console.log(spareChange(95));
 
 /*
  * #9
@@ -176,7 +190,14 @@ console.log(isEqual(5,9));
  * The function will return true if the sum of all the number values is greater than 30, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function dirty30(one, two, three){
+  if (one + two + three > 30){
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(dirty30(7,21,2));
 
 /*
  * #10
