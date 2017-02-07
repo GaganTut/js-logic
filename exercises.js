@@ -210,7 +210,14 @@ console.log(dirty30(7,21,2));
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function evenStevens(num){
+  if (num % 2 === 0){
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(evenStevens(10));
 
 /*
  * #11
@@ -224,8 +231,14 @@ console.log(dirty30(7,21,2));
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
-
-
+function daClub(cover, age){
+  if (cover >= 21 && age >= 21){
+    return "Welcome to the Legends Lounge.";
+  } else {
+    return "Chuck E Cheese is across the street";
+  }
+}
+console.log(daClub(20,26));
 /*
  * #12
  * Function - graduation
@@ -238,8 +251,14 @@ console.log(dirty30(7,21,2));
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
-
+function graduation(credits, thesis){
+  if (credits >= 120 || thesis === true){
+    return "Congratulations on a job well done.";
+  } else {
+    return "See you in summer school";
+  }
+}
+console.log(graduation(110, false));
 /*
  * #13
  * Function - moneyTrain
