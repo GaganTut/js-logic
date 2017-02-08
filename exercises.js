@@ -387,6 +387,15 @@ console.log(total);
   var east = [];
   var west = [];
 
+  for (var a = 0; a < players.length; a++){
+    if (a % 2 === 0){
+      east.push(players[a]);
+    } else {
+      west.push(players[a]);
+    }
+  }
+console.log(east);
+console.log(west);
 /*
  * #19
  * Function - subways
@@ -401,7 +410,15 @@ console.log(total);
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
-
+function subway(special){
+  for (var k = 0; k < subOftheDay.length; k++){
+    if (k % 2 !== 0){
+      subOftheDay[k] = "Classic Tuna";
+    }
+  }
+}
+subway();
+console.log(subOftheDay);
 /*
 Final Boss
  * #20
@@ -414,9 +431,18 @@ Final Boss
  *  The function will loop through the string value and put all the letters into an array, except for the letter "A" and "a". We don't want no stinking "A" or "a" in our array. Test your function with the `phrase` below!
 */
 
-  var phrase = "An apple a day keeps Alice feeling awesome!"
-  
+  var phrase = "An apple a day keeps Alice feeling awesome!";
+  var strArray = [];
 
+function removeLetter(str){
+  for (var c = 0; c < str.length; c++){
+    if (str[c] !== "A" && str[c] !== "a"){
+      strArray.push(str[c]);
+    }
+  }
+}
+removeLetter(phrase);
+console.log(strArray);
 
 
 
