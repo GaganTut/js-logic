@@ -270,8 +270,16 @@ console.log(graduation(110, false));
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
-
-
+function moneyTrain(speed){
+  if (speed < 50){
+    return "You are riding Honolulu's trail.";
+  } else if (speed < 100){
+    return "You are riding an Amtrak";
+  } else {
+    return "Now you ballin' in the Shinkansen";
+  }
+}
+console.log(moneyTrain(75));
 /*
  * #14
  * Function - buyDoughnut
@@ -285,8 +293,21 @@ console.log(graduation(110, false));
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
+var budget = 25;
+var doughnutPrice = 5;
+var doughnutBought = 0;
 
+function buyDoughnut(){
+  doughnutBought ++;
+  budget = budget - doughnutPrice;  
+}
+buyDoughnut();
+console.log(budget);
+console.log(doughnutBought);
 
+buyDoughnut();
+console.log(budget);
+console.log(doughnutBought);
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
 
@@ -313,7 +334,9 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 4"
  * "Player: 5"
 */
-
+for (var j = 1; j <= 5; j++){
+  console.log("Player: " + j);
+}
 
 /* 
  * #16
@@ -321,7 +344,9 @@ for (var i = 0; i<toyotaModels.length; i++){
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
-
+for (var y = 0; y < myFavFoods.length; y++){
+  console.log(myFavFoods[y]);
+}
 /*
  * #17
  * Function - sumItUp
@@ -336,8 +361,16 @@ for (var i = 0; i<toyotaModels.length; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
+var numArray = [23, 54, 12, 52, 94];
+var total = 0;
 
-
+function sumItUp(arr){
+  for (var z = 0; z < numArray.length; z ++){
+    total = total + arr[z];
+  }
+}
+sumItUp(numArray);
+console.log(total);
 /*
  * #18
  * Function - allStars
