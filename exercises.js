@@ -107,6 +107,8 @@ console.log(mustBeTrue(false));
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
+
+
 function bigBird(word){
   if (word.length === 3){
     return "Word to Big Bird!!!";
@@ -293,21 +295,34 @@ console.log(moneyTrain(75));
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
-var budget = 25;
+var myBudget = 36;
 var doughnutPrice = 5;
 var doughnutBought = 0;
 
 function buyDoughnut(){
-  doughnutBought ++;
-  budget = budget - doughnutPrice;  
+  if (myBudget >= doughnutPrice){
+    doughnutBought ++;
+    myBudget = myBudget - doughnutPrice;
+  }  
 }
 buyDoughnut();
-console.log(budget);
-console.log(doughnutBought);
+console.log("Yesterday, I bought " + doughnutBought + " donuts, and I had " + myBudget + " dollars left.");
 
 buyDoughnut();
-console.log(budget);
-console.log(doughnutBought);
+console.log("Then, I bought " + doughnutBought + " donuts, and I had " + myBudget + " dollars left.");
+
+var budget = 28;
+var donutPrice = 5;
+var donutBought = 0;
+
+function buyDonut(){
+  while (budget >= donutPrice){
+    donutBought++;
+    budget = budget - donutPrice;
+  }
+}
+buyDonut();
+console.log("Today, I spent as much as I could and bought " + donutBought + " donuts, and I have " + budget + " dollars left.");
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
 
@@ -366,7 +381,7 @@ var total = 0;
 
 function sumItUp(arr){
   for (var z = 0; z < numArray.length; z ++){
-    total = total + arr[z];
+    total += arr[z];
   }
 }
 sumItUp(numArray);
@@ -387,13 +402,16 @@ console.log(total);
   var east = [];
   var west = [];
 
-  for (var a = 0; a < players.length; a++){
-    if (a % 2 === 0){
-      east.push(players[a]);
-    } else {
-      west.push(players[a]);
+  function allStars(ballers){
+    for (var a = 0; a < ballers.length; a++){
+      if (a % 2 === 0){
+        east.push(ballers[a]);
+      } else {
+        west.push(ballers[a]);
+      }
     }
   }
+allStars(players);
 console.log(east);
 console.log(west);
 /*
@@ -411,13 +429,13 @@ console.log(west);
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
 function subway(special){
-  for (var k = 0; k < subOftheDay.length; k++){
+  for (var k = 0; k < special.length; k++){
     if (k % 2 !== 0){
-      subOftheDay[k] = "Classic Tuna";
+      special[k] = "Classic Tuna";
     }
   }
 }
-subway();
+subway(subOftheDay);
 console.log(subOftheDay);
 /*
 Final Boss
@@ -432,17 +450,17 @@ Final Boss
 */
 
   var phrase = "An apple a day keeps Alice feeling awesome!";
-  var strArray = [];
 
 function removeLetter(str){
+  var strArray = [];
   for (var c = 0; c < str.length; c++){
     if (str[c] !== "A" && str[c] !== "a"){
       strArray.push(str[c]);
     }
   }
+  return strArray;
 }
-removeLetter(phrase);
-console.log(strArray);
+console.log(removeLetter(phrase));
 
 
 
